@@ -1,0 +1,70 @@
+.AppLayout .app-header {
+  padding: 0 !important;
+  background: var(--ant-primary-color, #46A3A5) !important;
+
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+
+  .header-container {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 0;
+    width: 100%;
+    padding-right: 25px;
+    height: 64px;
+  }
+
+  .header-logo {
+    line-height: 0;
+    width: 250px;
+
+    #logo {
+      padding: 0 25px;
+      height: 64px;
+      line-height: 64px;
+      overflow: hidden;
+      display: block;
+      background: none;
+      transition: all 0.1s linear;
+
+      img {
+        height: 36px;
+        filter: none;
+        transition: filter 0.1s linear;
+      }
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.1);
+
+        img {
+          filter: opacity(90%);
+        }
+      }
+    }
+  }
+
+  .user-nav {
+    button {
+      background: none;
+      border: none;
+      min-width: 80px;
+      height: 64px;
+      overflow: hidden;
+      color: white;
+      transition: all 0.1s linear;
+      cursor: pointer;
+
+      &:hover,
+      &.ant-dropdown-open {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .ant-avatar {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.notifications-menu {
+  width: 350px;
+  padding: 0 !important;
+
+  .ant-dropdown-menu-item-group-title {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .ant-dropdown-menu-item-group-list {
+    margin: 0;
+  }
+
+  .notifications-list {
+    &.ant-dropdown-menu-item-disabled,
+    &.ant-dropdown-menu-submenu-title-disabled {
+      color: rgba(0, 0, 0, 0.85);
+      cursor: auto;
+    }
+
+    .ant-dropdown-menu-item {
+      padding: 0;
+    }
+
+    .scroll-bar {
+      height: 300px;
+      max-height: 300px;
+    }
+  }
+}

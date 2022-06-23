@@ -42,25 +42,11 @@ export const SideMenu: React.FC = () => {
           </Link>
         </Menu.Item>
 
-        <Menu.Item key="/widgets" icon={<CodeOutlined />}>
-          <Link to="/widgets">
+        <Menu.Item key="/orders" icon={<CodeOutlined />}>
+          <Link to="/orders">
             Comenzi
           </Link>
         </Menu.Item>
-
-        <Menu.SubMenu key="account" icon={<ShopOutlined />} title="Account">
-          <Menu.Item key="/account/users" icon={<UserSwitchOutlined />}>
-            <Link to="/account/users">
-              Users
-            </Link>
-          </Menu.Item>
-
-          <Menu.Item key="/account/settings" icon={<SettingOutlined />}>
-            <Link to="/account/settings">
-              Settings
-            </Link>
-          </Menu.Item>
-        </Menu.SubMenu>
       </Menu>
     </Sider>
   );

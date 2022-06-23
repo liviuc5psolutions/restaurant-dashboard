@@ -1,9 +1,6 @@
 import React from 'react';
 import { Avatar, Badge, Dropdown, Menu, Button } from 'antd';
 import { BellFilled } from '@ant-design/icons';
-import SimpleBarReact from 'simplebar-react';
-import { NoNotifications } from './NoNotifications';
-import { NotificationItem } from './NotificationItem';
 import { Notification } from './types';
 import './NotificationsDropdown.scss';
 
@@ -41,13 +38,6 @@ export const NotificationsDropdown: React.FC = () => {
     <Menu className="notifications-menu" selectedKeys={['mark-all-as-read']}>
       <Menu.ItemGroup title="Notifications">
         <Menu.Item key="notifications-list" disabled className="notifications-list">
-          <SimpleBarReact className="scroll-bar">
-            {hasNotifications ? (
-              notifications.map(
-                (value, index) => <NotificationItem key={index} notification={value} />
-              )
-            ) : <NoNotifications />}
-          </SimpleBarReact>
         </Menu.Item>
 
         <Menu.Item key="mark-all-as-read">

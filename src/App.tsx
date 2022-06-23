@@ -9,9 +9,10 @@ import {
   Products,
   Widgets,
 } from './pages';
+import { Orders } from './pages/orders/Orders';
 import ApiService from './services/api';
 
-ApiService.init('https://restaurant-web-app.local.test/api/')
+ApiService.init('https://restaurant-backend.local.test/api')
 
 export const App: React.FC = () => {
   return (
@@ -26,9 +27,8 @@ export const App: React.FC = () => {
             <Route index element={<Dashboard />} />
             <Route path="tables" element={<Tables />} />
             <Route path="products" element={<Products />} />
-            <Route path="widgets" element={<Widgets />} />
-            <Route path="account/*" element={<Account />} />
           </Route>
+          <Route path="orders" element={<Orders />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
